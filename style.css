@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+}
+
+.content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.navbar.sticky{/*classes adicionadas pelo JS, precisam estar juntas à classe pai, pois se estiverem separadas por espaço, não irá funcionar*/
+    background: #1b1b1b;
+    padding: 10px 0;
+    
+
+}
+
+.navbar{
+    
+    width: 100%;
+    padding: 25px 0;
+    position: fixed;
+    z-index: 5;
+    transition: 0.3s all ease;
+}
+
+.navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu-list{
+    display: inline-flex;
+    transition: all 0.5s ease;
+}
+
+.navbar .logo a{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.menu-list li{
+    list-style: none;
+}
+
+.menu-list li a{
+    color: #fff;
+    font-weight: 550;
+    font-size: 18px;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.menu-list li a:hover{
+    color:cyan;
+}
+
+.banner{
+    height: 100vh;
+    background-color:black;
+}
+
+.about{
+    padding: 40px 0;
+
+}
+
+.about .title{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.about p{
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+@media(max-width:860px){/*quando a tela tiver com menos de 860px, ele vai 
+    adicinar essas propriedades*/
+    .icon{
+        display: block;
+    }
+
+    .icon.hide{
+        display: none;
+    }
+
+    .navbar .menu-list{
+        display:block;
+        max-width: 400px;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        position: fixed;
+        text-align: center;
+        padding: 40px 0;
+        background-color: #222;
+        transition: all 0.3s ease;
+
+    }
+
+    body.disabledScroll{
+        overflow: hidden;
+    }
+
+    .navbar .menu-list.active{
+        left: 0%;
+    }
+
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+
+    .navbar .menu-list li a{
+        font-size: 23px;
+    }
+}
