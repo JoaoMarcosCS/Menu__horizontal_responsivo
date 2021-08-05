@@ -1,2 +1,2 @@
 # Menu__horizontal_responsivo
-Barra de menu horizontal responsivo feito com Html, Css e Js, sem fremaworks
+Essa barra de menu horizontal eu fiz com o auxilio deste vídeo:https://youtu.be/UHSeFxZIuv8, eu ensina conceitos de responsividade além de nos mostrar como deve ser a tipografia de um site moderno
